@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* Custom Color Theme Variables for Dark Mode */
+:root {
+  --primary-color: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --secondary-color: #0ea5e9;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --border-color: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #0f172a 100%);
+  color: var(--text-main);
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Premium Buttons Styling */
+.btn {
+  font-weight: 500;
+  border-radius: 0.75rem;
+  padding: 0.55rem 1.25rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  color: #ffffff !important;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  transform: translateY(-1px);
+}
+
+.btn-outline-light {
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--border-color);
+  border-color: var(--border-color);
+  color: #ffffff;
+}
+
+.btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+}
+
+.btn-outline-danger {
+  border-color: var(--danger-color);
+  color: var(--danger-color);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--danger-color);
+  color: #ffffff !important;
+}
+
+/* Glassmorphism & Soft Shadow Cards */
+.card {
+  border: 1px solid var(--border-color) !important;
+  background: rgba(30, 41, 59, 0.75) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 1.25rem !important;
+  transition: all 0.3s ease;
+  color: var(--text-main) !important;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.15), 0 10px 10px -6px rgba(59, 130, 246, 0.1) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Custom Form Controls */
+.form-control, .form-select {
+  background-color: #0f172a !important;
+  border: 1.5px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 0.75rem;
+  padding: 0.65rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+.form-control::placeholder {
+  color: #64748b !important;
+}
+
+.form-control:disabled {
+  background-color: #1e293b !important;
+  color: var(--text-muted) !important;
+  border-color: var(--border-color) !important;
+  opacity: 0.8;
+}
+
+/* List group style updates */
+.list-group-item {
+  background-color: transparent !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  color: var(--text-muted) !important;
+  transition: all 0.2s ease;
+}
+
+.list-group-item-action:hover {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+.list-group-item.active {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+/* Badges styling */
+.badge {
+  border-radius: 0.5rem;
+  padding: 0.45em 0.85em;
+  font-weight: 600;
+}
+
+.bg-primary-subtle {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+  color: #60a5fa !important;
+}
+
+.bg-success-subtle {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+}
+
+.bg-warning-subtle {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  color: #fbbf24 !important;
+}
+
+.bg-danger-subtle {
+  background-color: rgba(239, 110, 110, 0.15) !important;
+  color: #f87171 !important;
+  border-color: rgba(239, 110, 110, 0.25) !important;
+}
+
+/* Progress bar container and animation */
+.progress {
+  background-color: #334155;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+/* Custom Table Overrides */
+.table {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  color: var(--text-main) !important;
+}
+
+.table tbody tr {
+  background-color: rgba(30, 41, 59, 0.5) !important;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  color: var(--text-main) !important;
+}
+
+.table tbody tr:hover {
+  transform: scale(1.005);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+.table td, .table th {
+  border: none !important;
+  padding: 1rem 1.25rem;
+}
+
+.table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  border-bottom: 2px solid var(--border-color) !important;
+}
+
+/* App Header Details */
+.navbar-brand {
+  letter-spacing: -0.02em;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, #1e3b8b 0%, #0f172a 100%) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.border-primary {
+  border-color: var(--primary-color) !important;
+}
+
+/* Clean Custom Alert Boxes */
+.alert {
+  border-radius: 1rem;
+}
+
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  color: #34d399 !important;
+}
+
+.alert-danger {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  color: #f87171 !important;
+}
+
+.alert-info {
+  background-color: rgba(2, 132, 199, 0.15) !important;
+  border-color: rgba(2, 132, 199, 0.3) !important;
+  color: #38bdf8 !important;
+}
+
+/* Redefine Light/White Bootstrap Utilities to match Dark Mode */
+.bg-light {
+  background-color: var(--bg-dark) !important;
+}
+
+.bg-white {
+  background-color: var(--bg-card) !important;
+}
+
+.text-dark {
+  color: var(--text-main) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.card-header {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.table-light {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  color: var(--text-main) !important;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.nav-link {
+  color: var(--text-muted) !important;
+}
+
+.nav-link.active {
+  background-color: var(--bg-card) !important;
+  color: var(--primary-color) !important;
+  border-color: var(--border-color) var(--border-color) transparent !important;
+}
+
+.modal-content {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* Transitions */
+.transition-all {
+  transition: all 0.25s ease-in-out;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
