@@ -17,7 +17,14 @@ const app = express();
 
 // Middleware: allow requests from the frontend and parse JSON.
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: (origin, callback) => {
+    if (!origin) return callback(null, true);
+    const clientUrl = process.env.CLIENT_URL ? process.env.CLIENT_URL.replace(/\/$/, '') : '';
+    if (!process.env.CLIENT_URL || process.env.CLIENT_URL === '*' || origin === clientUrl || origin.includes('vercel.app') || origin.includes('localhost')) {
+      return callback(null, true);
+    }
+    return callback(null, true);
+  },
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
