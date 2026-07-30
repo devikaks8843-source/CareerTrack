@@ -4,7 +4,7 @@ Career Track is a feature-rich, full-stack placement management system designed 
 
 ---
 
-## 🌟 Key Features by User Role
+##  Key Features by User Role
 
 ### 1. Student Portal (Candidate Console)
 * **Comprehensive Profile Management:** Log personal information, educational backgrounds (CGPA, semester, branch, 10th & 12th percentages), technical and programming skills, project histories, internship experiences, certifications, LinkedIn links, and resume paths.
@@ -29,7 +29,7 @@ Career Track is a feature-rich, full-stack placement management system designed 
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Frontend:**
   * React (Vite-powered environment)
@@ -46,7 +46,7 @@ Career Track is a feature-rich, full-stack placement management system designed 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 CareerTrack/
@@ -98,7 +98,7 @@ CareerTrack/
 
 ---
 
-## 🔑 Default Credentials
+##  Default Credentials
 
 When the backend server launches, it automatically seeds a system administrator account if no admin accounts exist.
 
@@ -107,7 +107,7 @@ When the backend server launches, it automatically seeds a system administrator 
 
 ---
 
-## ⚙️ Configuration Setup
+##  Configuration Setup
 
 ### Server Environment Configuration
 Create a `.env` file inside the `backend/` directory with the following variables:
@@ -121,7 +121,7 @@ CLIENT_URL=http://localhost:5173
 
 ---
 
-## 🚀 Installation & Local Development
+##  Installation & Local Development
 
 ### 1. Clone the repository and navigate to the project directory:
 ```bash
@@ -156,9 +156,9 @@ The frontend will start running and can be accessed at: `http://localhost:5173`.
 
 ---
 
-## 🔌 API Reference Guide
+##  API Reference Guide
 
-### 🛡️ Authentication & User Profile Endpoints
+###  Authentication & User Profile Endpoints
 | HTTP Method | Route | Access | Description |
 |---|---|---|---|
 | `POST` | `/api/users/register` | Public | Registers a new Student or Company account. |
@@ -168,7 +168,7 @@ The frontend will start running and can be accessed at: `http://localhost:5173`.
 | `GET` | `/api/users/notifications` | Authenticated | Fetches customized notifications for the authenticated user. |
 | `PUT` | `/api/users/notifications/:id/read` | Authenticated | Marks a specific notification event as read. |
 
-### 💼 Jobs & Placement Drives Endpoints
+###  Jobs & Placement Drives Endpoints
 | HTTP Method | Route | Access | Description |
 |---|---|---|---|
 | `GET` | `/api/jobs` | Authenticated | Retrieves a list of active job posting records. |
@@ -177,7 +177,7 @@ The frontend will start running and can be accessed at: `http://localhost:5173`.
 | `PUT` | `/api/jobs/:id` | Company Only | Updates criteria or information on an active job posting. |
 | `DELETE` | `/api/jobs/:id` | Company Only | Deletes a recruitment drive job posting. |
 
-### 📝 Job Applications Endpoints
+###  Job Applications Endpoints
 | HTTP Method | Route | Access | Description |
 |---|---|---|---|
 | `GET` | `/api/applications` | Authenticated | Fetches user-relevant application trackers. |
@@ -187,7 +187,7 @@ The frontend will start running and can be accessed at: `http://localhost:5173`.
 | `POST` | `/api/applications/:id/round` | Company, Admin | Schedules a new interview round and notifies candidate. |
 | `DELETE` | `/api/applications/:id` | Student, Company, Admin | Removes or withdraws a student application record. |
 
-### 👑 Placement Officer (Admin Console) Endpoints
+###  Placement Officer (Admin Console) Endpoints
 | HTTP Method | Route | Access | Description |
 |---|---|---|---|
 | `GET` | `/api/admin/dashboard` | Admin Only | Retrieves overall analytics stats for dashboard metrics. |
