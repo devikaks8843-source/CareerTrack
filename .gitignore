@@ -24,6 +24,7 @@ frontend/dist/
 
 # IDE/Editor files
 .vscode/
+!.vscode/settings.json
 .idea/
 *.suo
 *.ntvs*
